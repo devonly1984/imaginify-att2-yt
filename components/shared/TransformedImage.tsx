@@ -32,7 +32,10 @@ const TransformedImage = ({
       <div className="flex-between">
         <h3 className="h3-bold text-dark-600">Transformed</h3>
         {hasDownload && (
-          <Button className="download-btn" onClick={(e) => downloadHandler}>
+          <Button
+            className="download-btn"
+            onClick={(e: MouseEvent) => downloadHandler}
+          >
             <Image
               src="/assets/icons/download.svg"
               alt="download"

@@ -150,7 +150,7 @@ const TransformationForm = ({
     type: string,
     onChangeField: (value: string) => void
   ) => {
-    debounce(()=>{
+    debounce(() => {
       setNewTransformation((prev: any) => ({
         ...prev,
         [type]: {
@@ -158,7 +158,7 @@ const TransformationForm = ({
           [fieldName === "prompt" ? "prompt" : "to"]: value,
         },
       }));
-    },1000)
+    }, 1000)();
     return onChangeField(value);
   };
   const onTransformHandler = async()=>{
